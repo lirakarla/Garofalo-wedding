@@ -12,8 +12,8 @@
       property="og:title"
       content="Wedding Invitation - Karla &amp; Frank "
     />
-    <meta property="og:description" content="💍 We’re getting married! 🎉
-    And we’d love for you to be part of our big day 🤍
+    <meta property="og:description" content="💍 We're getting married! 🎉
+    And we'd love for you to be part of our big day 🤍
     " />
     <meta property="og:type" content="article" />
     <meta
@@ -133,6 +133,21 @@
           transparent 0%,
           rgba(0, 0, 0, 0.5) 100%
         );
+      }
+
+      @media (max-width: 768px) {
+        .overlay-content {
+          align-items: center;
+          padding-bottom: 0;
+          margin-top: 20rem;
+        }
+        
+        .open-button {
+          margin: 0 auto;
+          display: block;
+          width: 80%;
+          max-width: 300px;
+        }
       }
 
       .overlay-content.show {
@@ -1059,6 +1074,13 @@
           background-size: cover;
           overflow: hidden;
         }
+        
+        @media (max-width: 768px) {
+          #fh5co-header {
+            background-image: url('img/iphone.jpg') !important;
+          }
+        }
+        
         #fh5co-header .overlay {
           position: absolute;
           top: 0;
@@ -1265,6 +1287,13 @@
           background-size: contain;
           overflow: hidden;
         }
+        
+        @media (max-width: 768px) {
+          #fh5co-event {
+            background-image: url('img/album11.JPG') !important;
+          }
+        }
+        
         #fh5co-event .overlay {
           position: absolute;
           top: 0;
