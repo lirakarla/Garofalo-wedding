@@ -1088,14 +1088,50 @@
       <style>
         #fh5co-header {
           position: relative;
-          background-attachment: fixed;
+          background-attachment: scroll;
           background-repeat: no-repeat;
           background-position: center center;
           background-size: cover;
-          overflow: hidden;
+          overflow: visible;
           -webkit-background-size: cover;
           -moz-background-size: cover;
           -o-background-size: cover;
+          height: 100vh;
+          min-height: 100vh;
+        }
+        
+        @media (max-width: 768px) {
+          #fh5co-header {
+            background-image: url('img/iphone.jpg') !important;
+            background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-attachment: scroll;
+            height: 100vh;
+            min-height: 100vh;
+            overflow: visible;
+            position: relative;
+          }
+
+          #fh5co-header .container {
+            height: auto;
+            min-height: 100vh;
+            overflow: visible;
+            position: relative;
+          }
+
+          #fh5co-header .row {
+            height: auto;
+            min-height: 100vh;
+            overflow: visible;
+            position: relative;
+          }
+
+          body {
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
+          }
         }
         
         @media (max-width: 768px) {
@@ -2951,42 +2987,52 @@
           background-color: #f5f5f5;
           border: 1px solid #e0e0e0;
           border-radius: 8px;
-          padding: 10px;
+          padding: 20px;
           margin: 3em auto;
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          max-width: 300px;
         }
 
         .zelle-info {
           text-align: center;
+          padding: 10px;
         }
 
         .zelle-number {
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-          font-size: 1.4em;
+          font-size: 24px;
+          font-weight: 500;
           color: #151515;
           letter-spacing: 2px;
           background-color: #ffffff;
-          padding: 15px;
+          padding: 15px 20px;
           border-radius: 4px;
           border: 1px solid #e0e0e0;
           margin: 0 auto;
-          display: block;
+          display: inline-block;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
+          text-align: center;
+          min-width: 200px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         @media (max-width: 768px) {
           .zelle-card {
             max-width: 90%;
             margin: 2em auto;
+            padding: 15px;
+            background-color: #ffffff;
           }
           
           .zelle-number {
-            font-size: 1.2em;
+            font-size: 20px;
             letter-spacing: 1px;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            padding: 12px 15px;
+            min-width: 180px;
+            color: #151515;
+            background-color: #f5f5f5;
+            border: 2px solid #e0e0e0;
           }
         }
       </style>
