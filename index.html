@@ -3019,6 +3019,8 @@
         const overlay = document.getElementById("overlayContent");
         const audio = document.getElementById("audio");
         const button = document.getElementById("mute");
+        const splashscreen = document.getElementById("splashscreen");
+        const page = document.getElementById("page");
 
         // Initialize audio
         audio.load();
@@ -3034,7 +3036,6 @@
           if (promise !== undefined) {
             promise.catch(error => {
               console.log("Error playing audio:", error);
-              // Retry after a short delay
               setTimeout(playAudio, 1000);
             });
           }
@@ -3043,14 +3044,18 @@
         // Try to play audio immediately when the page loads
         playAudio();
 
-        // Function to show overlay with animation
-        function showOverlay() {
-          overlay.classList.add("show");
-          video.removeEventListener("ended", showOverlay);
-        }
+        // Show overlay immediately
+        overlay.classList.add("show");
+
+        // Allow immediate scrolling
+        document.body.style.overflow = "auto";
+        splashscreen.style.position = "relative";
+        splashscreen.style.zIndex = "1";
 
         // Listen for video end
-        video.addEventListener("ended", showOverlay);
+        video.addEventListener("ended", function() {
+          video.removeEventListener("ended", arguments.callee);
+        });
 
         // Fallback in case video is cached
         if (video.ended) {
@@ -3070,8 +3075,6 @@
         // Show main page
         setTimeout(() => {
           page.style.display = "block";
-          
-          // Stop the video
           video.pause();
           video.currentTime = 0;
         }, 500);
