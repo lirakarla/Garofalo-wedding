@@ -669,6 +669,25 @@
           .countdown-label {
             font-size: 12px;
           }
+
+          .row {
+            margin-left: 0;
+            margin-right: 0;
+          }
+
+          .container {
+            padding-left: 15px;
+            padding-right: 15px;
+            height: auto;
+          }
+
+          .form-group {
+            margin-bottom: 5rem;
+          }
+
+          .success-message {
+            padding: 1.5rem;
+          }
         }
 
         /* Extra small devices */
@@ -719,6 +738,7 @@
         .container {
           padding-left: 15px;
           padding-right: 15px;
+          height: auto;
         }
 
         /* Improve form elements on mobile */
@@ -1301,12 +1321,39 @@
         
         @media (max-width: 768px) {
           #fh5co-event {
-            background-image: url('img/album11.JPG') !important;
-            background-size: cover;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
+            background-size: cover!important;
+            background-image: url('img/album3.png') !important;
+            background-size: 100% 100%;
+            -webkit-background-size: 100% 100%;
+            -moz-background-size: 100% 100%;
+            -o-background-size: 100% 100%;
             background-attachment: scroll;
+            background-position: center;
+            min-height: 100vh;
+            height: auto;
+          }
+
+          .event-wrap {
+            background: rgba(255, 255, 255, 0.95);
+            margin: 10rem 0rem;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+          }
+
+          .event-wrap.animate-box.fadeInUp.animated-fast {
+            margin: 10rem 0rem;
+          }
+
+          .event-content {
+            padding: 15px;
+          }
+
+          .venue-image {
+            width: 150px;
+            height: 150px;
+            margin: 15px auto;
           }
         }
         
@@ -1444,7 +1491,7 @@
       background-size: cover;"
         <div class="container">
           <div class="row" style="
-          height: 100vh;
+          height: 80vh;
       ">
             <div class="col-md-8 col-md-offset-2 text-center">
               <div class="dresscode-wrap">
@@ -1521,9 +1568,18 @@
         @media (max-width: 768px) {
           .script-title {
             font-size: 3em;
+            margin: 10rem 0rem;
           }
+          
+          .script-title-gift {
+            margin: 0em !important;
+          }
+          
           .dress-suit-icons {
             width: 95%;
+          }
+          .dress-code-details {
+            margin-top: 4em;
           }
         }
         .dress-code-images {
@@ -1559,6 +1615,7 @@
           .dress-code-images {
             gap: 20px;
             margin-left: 3rem;
+            padding-bottom: 8rem;
           }
 
           .dress-image, .tuxedo-image {
@@ -1746,6 +1803,10 @@
             margin: 2rem 0;
           }
 
+          #fh5co-timeline {
+            padding: 7rem 0;
+          }
+
           .timeline-container {
             padding: 10px;
           }
@@ -1795,7 +1856,7 @@
           }
 
           .timeline-item {
-            margin-bottom: 30px;
+            margin-bottom: 50px;
             padding-left: 50px;
           }
 
@@ -2482,6 +2543,10 @@
 
           .sad-emoji, .happy-emoji {
             font-size: 2.5em;
+          }
+
+          #fh5co-rsvp {
+            height: 74vh;
           }
         }
         
