@@ -2993,8 +2993,14 @@
             padding: 12px 15px;
             min-width: 180px;
           }
-           /* Safari specific styles */
-           @supports (-webkit-touch-callout: none) {
+           /* Chrome specific styles */
+           @supports (-webkit-appearance:none) and (not (-ms-ime-align:auto)) {
+            .zelle-number {
+              background-color: #ffffff;
+            }
+          }
+          /* Safari specific styles */
+          @supports (-webkit-touch-callout: none) {
             .zelle-number {
               background-color: #404040;
             }
