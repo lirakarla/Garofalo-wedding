@@ -3022,7 +3022,7 @@
             max-width: 90%;
             margin: 2em auto;
             padding: 15px;
-            background-color: #ffffff;
+            background-color: #dcdcdc;
           }
           
           .zelle-number {
@@ -3031,8 +3031,15 @@
             padding: 12px 15px;
             min-width: 180px;
             color: #151515;
-            background-color: #404040;
+            background-color: #f5f5f5;
             border: 2px solid #e0e0e0;
+          }
+
+          /* Safari specific styles */
+          @supports (-webkit-touch-callout: none) {
+            .zelle-number {
+              background-color: #404040;
+            }
           }
         }
       </style>
