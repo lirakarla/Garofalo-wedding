@@ -100,6 +100,37 @@
         justify-content: center;
         transition: opacity 0.5s ease;
         background: #000;
+        pointer-events: auto;
+      }
+
+      @media (max-width: 768px) {
+        #splashscreen {
+          position: relative;
+          min-height: 100vh;
+          height: auto;
+          overflow: visible;
+        }
+
+        .overlay-content {
+          position: relative;
+          z-index: 2;
+          text-align: center;
+          color: white;
+          padding: 20px;
+          width: 100%;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 1;
+          transform: none;
+          pointer-events: auto;
+          background: linear-gradient(
+            to bottom,
+            transparent 0%,
+            rgba(0, 0, 0, 0.5) 100%
+          );
+        }
       }
 
       .video-background {
@@ -3019,8 +3050,6 @@
         const overlay = document.getElementById("overlayContent");
         const audio = document.getElementById("audio");
         const button = document.getElementById("mute");
-        const splashscreen = document.getElementById("splashscreen");
-        const page = document.getElementById("page");
 
         // Initialize audio
         audio.load();
@@ -3036,6 +3065,7 @@
           if (promise !== undefined) {
             promise.catch(error => {
               console.log("Error playing audio:", error);
+              // Retry after a short delay
               setTimeout(playAudio, 1000);
             });
           }
@@ -3044,22 +3074,25 @@
         // Try to play audio immediately when the page loads
         playAudio();
 
-        // Show overlay immediately
-        overlay.classList.add("show");
+        // Show overlay immediately on mobile
+        if (window.innerWidth <= 768) {
+          overlay.classList.add("show");
+          overlay.style.opacity = "1";
+          overlay.style.transform = "none";
+        } else {
+          // Function to show overlay with animation for desktop
+          function showOverlay() {
+            overlay.classList.add("show");
+            video.removeEventListener("ended", showOverlay);
+          }
 
-        // Allow immediate scrolling
-        document.body.style.overflow = "auto";
-        splashscreen.style.position = "relative";
-        splashscreen.style.zIndex = "1";
+          // Listen for video end on desktop
+          video.addEventListener("ended", showOverlay);
 
-        // Listen for video end
-        video.addEventListener("ended", function() {
-          video.removeEventListener("ended", arguments.callee);
-        });
-
-        // Fallback in case video is cached
-        if (video.ended) {
-          showOverlay();
+          // Fallback in case video is cached
+          if (video.ended) {
+            showOverlay();
+          }
         }
       });
 
@@ -3075,6 +3108,8 @@
         // Show main page
         setTimeout(() => {
           page.style.display = "block";
+          
+          // Stop the video
           video.pause();
           video.currentTime = 0;
         }, 500);
