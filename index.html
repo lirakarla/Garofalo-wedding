@@ -1530,12 +1530,7 @@
                   <!-- Church -->
                   <div class="timeline-item">
                     <div class="timeline-icon">
-                      <svg viewBox="0 0 24 24" class="timeline-svg">
-                        <path
-                          d="M12,3L2,12h3v8h6v-6h2v6h6v-8h3L12,3z"
-                          fill="#151515"
-                        />
-                      </svg>
+                      <i class="material-icons">church</i>
                     </div>
                     <div class="timeline-content">
                       <h3>3:30 PM</h3>
@@ -1546,12 +1541,7 @@
                   <!-- Civil -->
                   <div class="timeline-item">
                     <div class="timeline-icon">
-                      <svg viewBox="0 0 24 24" class="timeline-svg">
-                        <path
-                          d="M14,2H6C4.9,2,4,2.9,4,4v16c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2V8L14,2z M16,18H8v-2h8V18z M16,14H8v-2h8V14z M13,9V3.5 L18.5,9H13z"
-                          fill="#151515"
-                        />
-                      </svg>
+                      <i class="material-icons">event</i>
                     </div>
                     <div class="timeline-content">
                       <h3>6:00 PM</h3>
@@ -1562,12 +1552,7 @@
                   <!-- Reception -->
                   <div class="timeline-item">
                     <div class="timeline-icon">
-                      <svg viewBox="0 0 24 24" class="timeline-svg">
-                        <path
-                          d="M11.99,2C6.47,2,2,6.48,2,12s4.47,10,9.99,10C17.52,22,22,17.52,22,12S17.52,2,11.99,2z M12,20c-4.42,0-8-3.58-8-8 s3.58-8,8-8s8,3.58,8,8S16.42,20,12,20z M12.5,7H11v6l5.25,3.15l0.75-1.23l-4.5-2.67V7z"
-                          fill="#151515"
-                        />
-                      </svg>
+                      <i class="material-icons">local_bar</i>
                     </div>
                     <div class="timeline-content">
                       <h3>6:00 PM</h3>
@@ -1578,12 +1563,7 @@
                   <!-- Dinner -->
                   <div class="timeline-item">
                     <div class="timeline-icon">
-                      <svg viewBox="0 0 24 24" class="timeline-svg">
-                        <path
-                          d="M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9S16.97,3,12,3z M12,17c-2.76,0-5-2.24-5-5s2.24-5,5-5s5,2.24,5,5 S14.76,17,12,17z"
-                          fill="#151515"
-                        />
-                      </svg>
+                      <i class="material-icons">restaurant</i>
                     </div>
                     <div class="timeline-content">
                       <h3>7:00 PM</h3>
@@ -1594,29 +1574,19 @@
                   <!-- Party -->
                   <div class="timeline-item">
                     <div class="timeline-icon">
-                      <svg viewBox="0 0 24 24" class="timeline-svg">
-                        <path
-                          d="M13.5,5.5c1.1,0,2-0.9,2-2s-0.9-2-2-2s-2,0.9-2,2S12.4,5.5,13.5,5.5z M20,12.5V23h-1V12.5c0-2.5-1.5-4.5-4-4.5h-2v9h-1v-9 H9c-2.5,0-4,2-4,4.5V23H4V12.5C4,9.5,6.5,7,9,7h2V3h2v4h2C17.5,7,20,9.5,20,12.5z"
-                          fill="#151515"
-                        />
-                      </svg>
-            </div>
+                      <i class="material-icons">celebration</i>
+                    </div>
                     <div class="timeline-content">
                       <h3>9:30 PM</h3>
                       <p>Dancing</p>
-          </div>
-        </div>
+                    </div>
+                  </div>
 
                   <!-- End -->
                   <div class="timeline-item">
                     <div class="timeline-icon">
-                      <svg viewBox="0 0 24 24" class="timeline-svg">
-                        <path
-                          d="M12,21.35l-1.45-1.32C5.4,15.36,2,12.28,2,8.5C2,5.42,4.42,3,7.5,3c1.74,0,3.41,0.81,4.5,2.09C13.09,3.81,14.76,3,16.5,3 C19.58,3,22,5.42,22,8.5c0,3.78-3.4,6.86-8.55,11.54L12,21.35z"
-                          fill="#151515"
-                        />
-                      </svg>
-      </div>
+                      <i class="material-icons">favorite</i>
+                    </div>
                     <div class="timeline-content">
                       <h3>11:00 PM</h3>
                       <p>End of Celebration</p>
@@ -1686,9 +1656,9 @@
           z-index: 1;
         }
 
-        .timeline-svg {
-          width: 24px;
-          height: 24px;
+        .timeline-icon i {
+          font-size: 24px;
+          color: #151515;
         }
 
         .timeline-content {
@@ -1753,9 +1723,8 @@
             height: 35px;
           }
 
-          .timeline-svg {
-            width: 20px;
-            height: 20px;
+          .timeline-icon i {
+            font-size: 20px;
           }
 
           .timeline-content {
@@ -1793,9 +1762,8 @@
             height: 30px;
           }
 
-          .timeline-svg {
-            width: 18px;
-            height: 18px;
+          .timeline-icon i {
+            font-size: 18px;
           }
 
           .timeline-content {
@@ -2528,30 +2496,48 @@
       <script>
         // Guest list with allowed number of guests
         const guestList = {
-          "Delia Lira": 4,
-          "Laura Lira": 2,
+          "Thomas & Delia Garza": 4,
+          "Laura & Leo Lira": 2,
           "Erika Lira": 1,
           "Karla Lira": 1,
           "Imelda Rangel": 1,
           "Imelda Flores": 1,
           "Itzel": 1,
-          "Pamela Elizondo": 2,
-          "John Garofalo": 2,
-          "Patty Garofalo": 2,
-          "Mike Falco":2,
-          "Nick Falco":2,
-          "Jim Garofalo":4,
-          "Paul LaRocca":2,
-          "John Falco":2,
-          "Teresa Falco":2,
+          "Hector Hernandez & Pamela Elizondo": 2,
+          "John & Patty Garofalo": 2,
+          "Mike & Kara Falco": 2,
+          "Nick & Liz Falco": 2,
+          "Jim & Erin Garofalo": 4,
+          "Paul & Lauren LaRocca": 2,
+          "John & Teresa Falco": 2,
+          "Mike & FanFan Kaiteris": 2,
+          "Mike Plati": 1,
+          "Mike Blicharski": 1,
+          "Diana & Russ Romond": 2,
+          "Rusty Romond": 1,
+          "Maria Satella":1,
+          "Jonhathan & Nathalie Romond": 2,
+          "Peter & Mary Kaiteris":2,
+          " Hank & Janie Schinder": 2,
+          "Anna Falco":1,
+          "Jim & Hilary Ford": 2,
+          "John & Cindy Carbone": 2,
+          "AJ & Sara Carlson": 2,
+          "John Carbone":1,
+          "Neil Sampat": 1,
+          "Danielle Holewa": 1,
+          "Steff Kusterback": 1,
+          "Frank & Janet Ruddy": 2,
         };
 
-        // Function to check guest allowance
+        // Function to check guest allowance using regex
         function checkGuestAllowance(name) {
           const normalizedName = name.trim().toLowerCase();
-          const foundGuest = Object.keys(guestList).find(guest => 
-            guest.toLowerCase() === normalizedName
-          );
+          const foundGuest = Object.keys(guestList).find(guest => {
+            // Create regex pattern that matches any part of the guest name
+            const pattern = new RegExp(normalizedName.split(' ').join('.*'), 'i');
+            return pattern.test(guest);
+          });
           
           return foundGuest ? {
             found: true,
@@ -2577,15 +2563,16 @@
           // Function to filter and show matching guests
           function showMatchingGuests(inputValue) {
             const normalizedInput = inputValue.toLowerCase();
-            const matches = Object.keys(guestList).filter(guest =>
-              guest.toLowerCase().includes(normalizedInput)
-            );
+            const matches = Object.keys(guestList).filter(guest => {
+              const pattern = new RegExp(normalizedInput.split(' ').join('.*'), 'i');
+              return pattern.test(guest);
+            });
 
             if (matches.length > 0 && inputValue.length > 0) {
               dropdownContainer.innerHTML = matches
                 .map(guest => `
-                  <div class="dropdown-item" data-name="${guest}">
-                    ${guest}
+                  <div class="dropdown-item" data-name="${guest}" data-guests="${guestList[guest]}">
+                    ${guest} (${guestList[guest]} guest${guestList[guest] > 1 ? 's' : ''})
                   </div>
                 `)
                 .join('');
@@ -2593,24 +2580,22 @@
             } else {
               dropdownContainer.style.display = 'none';
             }
-          }
 
-          // Add input event listener for real-time filtering
-          nameInput.addEventListener('input', function(e) {
-            showMatchingGuests(e.target.value);
-            
             // Check guest allowance for info display
-            const result = checkGuestAllowance(e.target.value);
+            const result = checkGuestAllowance(inputValue);
             if (result.found) {
               guestInfoDiv.innerHTML = `
-                <div>
-                  <p>Number of guests: ${result.allowedGuests}</p>
-                </div>
+                  <p>Number of guests allowed: ${result.allowedGuests}</p>
               `;
               guestInfoDiv.style.display = 'block';
             } else {
               guestInfoDiv.style.display = 'none';
             }
+          }
+
+          // Add input event listener for real-time filtering
+          nameInput.addEventListener('input', function(e) {
+            showMatchingGuests(e.target.value);
           });
 
           // Handle click on dropdown items
@@ -2618,14 +2603,14 @@
             const item = e.target.closest('.dropdown-item');
             if (item) {
               const selectedName = item.dataset.name;
+              const selectedGuests = item.dataset.guests;
               nameInput.value = selectedName;
               dropdownContainer.style.display = 'none';
               
               // Update guest info display
-              const result = checkGuestAllowance(selectedName);
               guestInfoDiv.innerHTML = `
-                <div>
-                  <p>Number of guests: ${result.allowedGuests}</p>
+                <div class="guest-info-content">
+                  <p>Number of guests allowed: ${selectedGuests}</p>
                 </div>
               `;
               guestInfoDiv.style.display = 'block';
@@ -2650,10 +2635,7 @@
           
           // Check guest allowance
           const guestCheck = checkGuestAllowance(name);
-          if (!guestCheck.found) {
-            alert('Sorry, we couldn\'t find your name in the guest list. Please make sure to enter your name exactly as it appears in your invitation.');
-            return;
-          }
+          const allowedGuests = guestCheck.found ? guestCheck.allowedGuests : 1;
           
           // Show loading state
           const submitButton = document.querySelector('.btn-submit');
@@ -2664,7 +2646,7 @@
           emailjs.send("service_9nxk42b", "template_fti62vn", {
             guest_name: name,
             attendance: attendance === 'yes' ? 'Will Attend' : 'Cannot Attend',
-            allowed_guests: guestCheck.allowedGuests,
+            allowed_guests: allowedGuests,
             to_email: 'rnjlkd@gmail.com',
             email: 'rnjlkd@gmail.com',
             reply_to: 'rnjlkd@gmail.com'
@@ -2688,7 +2670,7 @@
                 <div class="success-message">
                   <h3>Thank you for your RSVP!</h3>
                   <p>We're excited to have you join us, ${name}!</p>
-                  <p>Number of guests allowed: ${guestCheck.allowedGuests}</p>
+                  <p>Number of guests allowed: ${allowedGuests}</p>
                   <div class="happy-emoji">🎉</div>
                 </div>
               `;
@@ -3187,6 +3169,66 @@
 
       function openMapModal2() {
         mapModal2.style.display = "block";
+      }
+    </script>
+
+    <script>
+      function submitRSVP() {
+        const name = document.getElementById("name").value;
+        const guestCount = document.getElementById("guestCount").value;
+        const attendance = document.getElementById("attendance").value;
+        const rsvpForm = document.getElementById("rsvpForm");
+        const rsvpSuccess = document.getElementById("rsvpSuccess");
+        const rsvpSuccessMessage = document.getElementById("rsvpSuccessMessage");
+        const rsvpSuccessMessageCannotAttend = document.getElementById("rsvpSuccessMessageCannotAttend");
+
+        // Check if the name matches any of the predefined options
+        const predefinedOptions = [
+          "Diana & Russ Romond",
+          "Diana Romond",
+          "Russ Romond",
+          "Diana & Russ",
+          "Diana",
+          "Russ"
+        ];
+
+        // Check if the name matches any of the predefined options
+        const isPredefinedOption = predefinedOptions.some(option => 
+          option.toLowerCase() === name.toLowerCase()
+        );
+
+        // If it's a predefined option, set guest count based on the option
+        if (isPredefinedOption) {
+          if (name.toLowerCase().includes("diana") && name.toLowerCase().includes("russ")) {
+            document.getElementById("guestCount").value = "2";
+          } else if (name.toLowerCase() === "diana" || name.toLowerCase() === "russ") {
+            document.getElementById("guestCount").value = "1";
+          }
+        }
+
+        if (attendance === "Cannot Attend") {
+          rsvpSuccessMessageCannotAttend.innerHTML = `
+            <h2>Thank you for your response, ${name}!</h2>
+            <p>We're sorry you won't be able to join us, but we appreciate you letting us know.</p>
+            <p>We'll miss you on our special day!</p>
+            <div class="emoji">😢</div>
+          `;
+          rsvpSuccessMessageCannotAttend.style.display = "block";
+          rsvpSuccessMessage.style.display = "none";
+        } else {
+          rsvpSuccessMessage.innerHTML = `
+            <h2>Thank you for your RSVP, ${name}!</h2>
+            <p>We're excited to celebrate with you!</p>
+            <p>We've noted that you'll be bringing ${guestCount} guest(s).</p>
+            <div class="emoji">🎉</div>
+          `;
+          rsvpSuccessMessage.style.display = "block";
+          rsvpSuccessMessageCannotAttend.style.display = "none";
+        }
+
+        rsvpForm.style.display = "none";
+        rsvpSuccess.style.display = "block";
+        rsvpSuccess.classList.add("show");
       }
     </script>
   </body>
