@@ -1088,50 +1088,14 @@
       <style>
         #fh5co-header {
           position: relative;
-          background-attachment: scroll;
+          background-attachment: fixed;
           background-repeat: no-repeat;
           background-position: center center;
           background-size: cover;
-          overflow: visible;
+          overflow: hidden;
           -webkit-background-size: cover;
           -moz-background-size: cover;
           -o-background-size: cover;
-          height: 100vh;
-          min-height: 100vh;
-        }
-        
-        @media (max-width: 768px) {
-          #fh5co-header {
-            background-image: url('img/iphone.jpg') !important;
-            background-size: cover;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-attachment: scroll;
-            height: 100vh;
-            min-height: 100vh;
-            overflow: visible;
-            position: relative;
-          }
-
-          #fh5co-header .container {
-            height: auto;
-            min-height: 100vh;
-            overflow: visible;
-            position: relative;
-          }
-
-          #fh5co-header .row {
-            height: auto;
-            min-height: 100vh;
-            overflow: visible;
-            position: relative;
-          }
-
-          body {
-            overflow-y: scroll;
-            -webkit-overflow-scrolling: touch;
-          }
         }
         
         @media (max-width: 768px) {
@@ -2984,7 +2948,7 @@
 
       <style>
         .zelle-card {
-          background-color: #111111;
+          background-color: #f5f5f5;
           border: 1px solid #e0e0e0;
           border-radius: 8px;
           padding: 20px;
@@ -3014,7 +2978,6 @@
           -moz-osx-font-smoothing: grayscale;
           text-align: center;
           min-width: 200px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         @media (max-width: 768px) {
@@ -3022,7 +2985,6 @@
             max-width: 90%;
             margin: 2em auto;
             padding: 15px;
-            background-color: #dcdcdc;
           }
           
           .zelle-number {
@@ -3030,13 +2992,9 @@
             letter-spacing: 1px;
             padding: 12px 15px;
             min-width: 180px;
-            color: #151515;
-            background-color: #f5f5f5;
-            border: 2px solid #e0e0e0;
           }
-
-          /* Safari specific styles */
-          @supports (-webkit-touch-callout: none) {
+           /* Safari specific styles */
+           @supports (-webkit-touch-callout: none) {
             .zelle-number {
               background-color: #404040;
             }
